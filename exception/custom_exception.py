@@ -1,6 +1,7 @@
 import sys
 import traceback
-class DocumentPortalException(Exception):
+class DocumentPortalExccondaeption(Exception):
+    """This works only when running locally, needs to be changed for running on AWS"""
     def __init__(self, error_message, error_details):
         _, _, exc_tb = error_details.exc_info()
         self.file_name = exc_tb.tb_frame.f_code.co_filename
@@ -16,10 +17,10 @@ class DocumentPortalException(Exception):
         {self.traceback_str}
         """
 
-if __name__ == "__main__":
-    try:
-        a = 1 / 0  # deliberate error
-    except Exception as e:
-        app_exc = DocumentPortalException(e, sys)
-        #logger.error(app_exc)  # log it to file
-        raise app_exc  # propagate with full traceback
+# if __name__ == "__main__":
+#     try:
+#         a = 1 / 0  # deliberate error
+#     except Exception as e:
+#         app_exc = DocumentPortalException(e, sys)
+#         #logger.error(app_exc)  # log it to file
+#         raise app_exc  # propagate with full traceback
