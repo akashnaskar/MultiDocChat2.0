@@ -10,7 +10,7 @@ def parse_requirements(filename):
         ]
 
 setup(
-    name="document_portal",
+    name="MultiDocChat",
     author="Akash Naskar",
     version="0.1",
     description="An intelligent document analysis and comparison system powered by LLMs",
