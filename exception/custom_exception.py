@@ -1,6 +1,6 @@
 import sys
 import traceback
-class DocumentPortalExccondaeption(Exception):
+class DocumentPortalException(Exception):
     """This works only when running locally, needs to be changed for running on AWS"""
     def __init__(self, error_message, error_details):
         _, _, exc_tb = error_details.exc_info()
